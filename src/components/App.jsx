@@ -62,8 +62,7 @@ export const App = () => {
       prevContacts.filter(contact => contact.id !== id)
     );
   };
-
-  const handleFilterChange = event => {
+  const handleSearch = event => {
     setFilter(event.target.value);
   };
 
@@ -93,7 +92,7 @@ export const App = () => {
         onSubmit={handleSubmit}
       />
       <h2>Contacts</h2>
-      <Filter value={filter} onChange={handleFilterChange} />
+      <Filter value={filter} onChange={handleSearch} />
       <ContactList
         contacts={filteredContacts}
         onDeleteContact={handleDeleteContact}
